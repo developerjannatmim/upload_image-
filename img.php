@@ -5,7 +5,6 @@ if (isset($_POST['submit'])) {
   $tmp_name = $_FILES['upload_img']['tmp_name'];
   move_uploaded_file($tmp_name, "upload/" . $img_name);
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -19,9 +18,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-  <img src="upload/<?php if (isset($img_name)) {
-                      echo $img_name;
-                    } ?>" alt="picture" />
+  <img src="upload/<?php if (isset($img_name)) { echo $img_name;} ?>" alt="picture" />
 </body>
 
 </html>
